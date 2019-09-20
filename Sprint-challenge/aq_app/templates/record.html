@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SC</title>
+        <link rel="stylesheet" href="https://unpkg.com/picnic"/> 
+    </head>
+    <body>
+        {% block content %}
+        <p>
+            Filter values above 10
+        </p>
+        <ul id="filter_1">
+            {% for value in filter_1 %}
+            <li class="">{{ value.value }}  {{ value.datetime }}</li>
+            {% endfor %}
+        </ul>
+        <p>
+            Filter values below 2.5
+        </p>
+        <ul id="filter_2">
+            {% for value in filter_2 %}
+            <li class="stack">{{ value.value }}  {{ value.datetime }}</li>
+            {% endfor %}
+        </ul>
+        {% endblock %}
+    </body>
+</html>
